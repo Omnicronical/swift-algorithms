@@ -16,3 +16,4 @@ for i in 1...3 {
     print(i)
     print(name)
 }
+ var swag = "swag"
