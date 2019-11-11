@@ -120,7 +120,7 @@ class Sorting {
     func linearSearch (data: [Int], input: Int) {
         let userInput = input
         let array: [Int] = data
-        for i in 0...array.count {
+        for i in 0..<array.count {
             if array[i] == userInput {
                 print("Gotcha")
             } else {
