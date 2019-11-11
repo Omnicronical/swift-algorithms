@@ -88,4 +88,19 @@ class SortingTest: XCTestCase {
         
     }
     
+    func testInsertionSort(){
+        let sorting = Sorting()
+        var data: [Int] = []
+        for _ in 0...10 {
+            data.append(Int.random(in: 0...100))
+        }
+        
+        var expected = data.sorted()
+
+        //act
+        let actual = sorting.insertionSort(array: data)
+        //assert
+        XCTAssertEqual(actual, expected)
+    }
+    
 }

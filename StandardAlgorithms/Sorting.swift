@@ -101,6 +101,21 @@ class Sorting {
        
     }
     
+    func insertionSort(array: [Int]) -> [Int] {
+        var array = array
+        for i in 1..<array.count {
+            var counter = i
+            while counter > 0 && array[counter] < array[counter-1] {
+                let temp = array[counter]
+                array[counter] = array[counter-1]
+                array[counter-1] = temp
+                counter -= 1
+            }
+        }
+        
+        return array
+        
+    }
     
     func linearSearch (data: [Int], input: Int) {
         let userInput = input
