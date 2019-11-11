@@ -78,21 +78,21 @@ class Sorting {
     }
 
     func quickSort(array: [Int]) -> [Int] {
-        var left = [Int]()
-        var right = [Int]()
-        var sorted = [Int]()
         if array.count <= 1{
             return array
         } else {
             var pivot = array[0]
-            for i in 0..<array.count {
+            var left = [Int]()
+            var right = [Int]()
+            for i in 1..<array.count {
                 let item = array[i]
-                if item < pivot {
+                if item <= pivot {
                     left.append(item)
-                } else if item >= pivot {
+                } else if item > pivot {
                     right.append(item)
                 }
             }
+            var sorted = [Int]()
             sorted.append(contentsOf: (quickSort(array: left)))
             sorted.append(pivot)
             sorted.append(contentsOf: (quickSort(array: right)))
