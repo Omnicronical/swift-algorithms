@@ -100,6 +100,34 @@ class Sorting {
         }
        
     }
+    
+    
+    func linearSearch (data: [Int], input: Int) {
+        let userInput = input
+        let array: [Int] = data
+        for i in 0...array.count {
+            if array[i] == userInput {
+                print("Gotcha")
+            } else {
+                print("Nope")
+            }
+        }
+    }
+    func binarySearch (array: [Int], userInput: Int) -> String {
+        var lowerBound = 0
+        var upperBound = array.count
+        while lowerBound < upperBound {
+            let midIndex = lowerBound + (upperBound - lowerBound) / 2
+            if array[midIndex] == userInput {
+                return ("Gotcha")
+            } else if array[midIndex] < userInput {
+                lowerBound = midIndex + 1
+            } else {
+                upperBound = midIndex
+            }
+        }
+        return ("Nope")
+    }
 
 }
 

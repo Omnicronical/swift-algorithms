@@ -74,4 +74,18 @@ class SortingTest: XCTestCase {
         XCTAssertEqual(data, [1,2,3,26,26])
     }
     
+    func testBinarySearch() {
+        let sorting = Sorting()
+        let sortedList = [12,1412,11212,191919]
+        let userInput = 11212
+        let expected = ("Gotcha")
+        
+        let actual = sorting.binarySearch(array: sortedList, userInput: userInput)
+        
+        XCTAssertEqual(actual, expected)
+        
+        
+        
+    }
+    
 }
